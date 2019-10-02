@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#4C504C"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
@@ -14,11 +16,8 @@
         android:background="#353333"
         android:layout_height="wrap_content"
         android:text="Standard"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/btnAnimated"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="5dp"
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:onClick="bottomSheetMaterialDialog"
@@ -27,10 +26,26 @@
         android:background="#353333"
         android:textColor="#FFFFFF"
         android:layout_height="wrap_content"
-        android:text="Animated"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="5dp"
+        android:text="Animated Bottom Sheet Dialog" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:onClick="materialDialogWithAnimation"
+        android:layout_width="200dp"
+        android:background="#353333"
+        android:textColor="#FFFFFF"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:text="Animated Standard Dialog" />
+
+    <Button
+        android:onClick="bottomSheetMaterialDialogWithoutAnim"
+        android:layout_width="200dp"
+        android:background="#353333"
+        android:textColor="#FFFFFF"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:text="Bottom Sheet Dialog" />
+
+
+</LinearLayout>
